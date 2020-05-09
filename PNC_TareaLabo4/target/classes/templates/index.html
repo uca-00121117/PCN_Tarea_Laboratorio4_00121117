@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlms:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/style.css}">
+<script src="https://kit.fontawesome.com/b8b9deb73f.js" crossorigin="anonymous"></script>
+<title>Venta de producto</title>
+</head>
+<body>
+<div class=Global>
+<div class="tarjeta">
+<form th:action="@{/formProducto}" th:object="${producto}" method="post">
+	
+		<h1>Ingresar producto</h1>
+		<i class="fas fa-shopping-cart icono-compra"></i>
+
+		<div class="formulario-contenido">
+			<label>Nombre del producto:</label><br>
+			<input type="text" th:field="${producto.nombre}"><br>
+			<span th:errors="${producto.nombre}" style="color:  red;"></span><br>
+			
+			<label>Descripcion del producto:</label><br>
+			<input type="text" th:field="${producto.descripcion}"><br>
+			<span th:errors="${producto.descripcion}" style="color: red;"></span><br>
+			
+			<label>Precio del producto:</label><br>
+			<input type="number" th:field="${producto.precio}"><br>
+			<span th:errors="${producto.precio}" style="color:  red;"></span><br>
+			
+			<label>Fecha de vencimiento del producto:</label><br>
+			<input type="text" th:field="${producto.vencimiento}"><br>
+			<span th:errors="${producto.vencimiento}" style="color:  red;"></span><br>
+		</div>
+		<input type="submit" value="Agregar producto">
+	</form>
+</div>
+</div>
+
+</body>
+</html>
