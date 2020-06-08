@@ -1,4 +1,4 @@
-# PCN_Tarea_Laboratorio4_00121117
+# PNC_Tarea_Laboratorio4_00121117
 # Instrucciones 
 ## Anotaciones de validación,
 
